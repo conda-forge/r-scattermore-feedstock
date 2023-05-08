@@ -11,6 +11,8 @@ Home: https://github.com/exaexa/scattermore
 Package license: GPL-3.0-or-later
 
 Summary: C-based conversion of large scatterplot data to rasters. Speeds up plotting of data with millions of points.
+
+Documentation: https://exaexa.github.io/scattermore/
 About r-scattermore
 -------------------
 
@@ -19,6 +21,8 @@ Home: https://github.com/exaexa/scattermore
 Package license: GPL-3.0-or-later
 
 Summary: C-based conversion of large scatterplot data to rasters. Speeds up plotting of data with millions of points.
+
+Documentation: https://exaexa.github.io/scattermore/
 
 Current build status
 ====================
