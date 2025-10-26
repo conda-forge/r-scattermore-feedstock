@@ -12,7 +12,7 @@ source:
   sha256: 5534a87b0bdd1375f0fbffc1a5c980ad64e33a108435a67469b8324b580602d1
 
 build:
-  number: 4
+  number: 5
   rpaths:
     - lib/R/lib/
     - lib/
@@ -45,9 +45,15 @@ requirements:
     - r-scales
 
 test:
+  requires:
+    - r-testthat
+  source_files:
+    - tests/
   commands:
-    - $R -e "library('scattermore')"           # [not win]
-    - "\"%R%\" -e \"library('scattermore')\""  # [win]
+    - $R -e "library('scattermore')"                                                  # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"           # [not win]
+    - "\"%R%\" -e \"library('scattermore')\""                                         # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
   home: https://github.com/exaexa/scattermore
